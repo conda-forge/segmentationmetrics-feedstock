@@ -1,5 +1,5 @@
 {% set name = "segmentationmetrics" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/alexdaniel654/Segmentation_Metrics/archive/v{{ version }}.tar.gz
-  sha256: a6763d899894e3e65f5bdcca6ae60ffd26f66c0abe977d27e25f70274ce5649f
+  sha256: 4c362607e665ea128b791a4d24d073d3567dc37af84de14a413d0bbb852a7e3f
 
 build:
   noarch: python
@@ -21,9 +21,9 @@ requirements:
   run:
     - python >=3.9,<4.0
     - absl-py ==2.1.0
-    - numpy ==2.0.0
+    - numpy ==2.0.1
     - pandas ==2.2.2
-    - pytest ==8.2.2
+    - pytest ==8.3.1
     - scikit-image ==0.24.0
     - scipy ==1.13.1
 
@@ -45,6 +45,12 @@ about:
   dev_url: https://github.com/alexdaniel654/Segmentation_Metrics
   doc_url: https://segmentationmetrics.readthedocs.io/
   summary: Binary segmentation accuracy metrics
+  description: |
+    A small package for assessing the accuracy of binary segmentations.  
+    There are lots of metrics that can be used to compare how close 
+    two segmentations are, here voxel overlap, surface and volume based 
+    metrics are all calculated at once and returned either as 
+    individual metrics, a dictionary or a Pandas DataFrame.
   license: Apache-2.0
   license_file: LICENSE.md
 
