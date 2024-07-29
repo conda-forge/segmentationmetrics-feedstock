@@ -46,7 +46,7 @@ about:
   doc_url: https://segmentationmetrics.readthedocs.io/
   summary: Binary segmentation accuracy metrics
   description: |
-    A small package for assessing the accuracy of binary segmentations. 
+    A small package for assessing the accuracy of binary segmentations.  
     There are lots of metrics that can be used to compare how close 
     two segmentations are, here voxel overlap, surface and volume based 
     metrics are all calculated at once and returned either as 
