@@ -13,6 +13,13 @@ Development: https://github.com/alexdaniel654/Segmentation_Metrics
 
 Documentation: https://segmentationmetrics.readthedocs.io/
 
+A small package for assessing the accuracy of binary segmentations.
+There are lots of metrics that can be used to compare how close
+two segmentations are, here voxel overlap, surface and volume based
+metrics are all calculated at once and returned either as
+individual metrics, a dictionary or a Pandas DataFrame.
+
+
 Current build status
 ====================
 
