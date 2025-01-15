@@ -12,14 +12,14 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9,<4.0
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.9,<4.0
+    - python >={{ python_min }},<4.0
     - absl-py ==2.1.0
     - numpy ==2.0.1
     - pandas ==2.2.2
@@ -33,6 +33,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
   imports:
     - segmentationmetrics
   commands:
