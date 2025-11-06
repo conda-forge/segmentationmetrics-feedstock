@@ -1,5 +1,6 @@
 {% set name = "segmentationmetrics" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://github.com/alexdaniel654/Segmentation_Metrics/archive/v{{ version }}.tar.gz
-  sha256: 4c362607e665ea128b791a4d24d073d3567dc37af84de14a413d0bbb852a7e3f
+  sha256: ec50d971340d3ce98bbd6b01d989f6ef6628a18e58f5f24fa2e96f180cf39ae6
 
 build:
   noarch: python
@@ -16,29 +17,31 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<4.0
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.9,<4.0
-    - absl-py ==2.1.0
-    - numpy ==2.0.1
-    - pandas ==2.2.2
-    - pytest ==8.3.1
-    - scikit-image ==0.24.0
-    - scipy ==1.13.1
+    - python >={{ python_min }}
+    - absl-py >=2.1.0
+    - numpy >=2.0.1
+    - pandas >=2.2.3
+    - pytest >=8.3.2
+    - scikit-image >=0.24.0
+    - scipy >=1.13.1
 
 test:
   source_files:
     - segmentationmetrics
   requires:
     - pip
+    - python {{ python_min }}
     - pytest
   imports:
     - segmentationmetrics
   commands:
     - pip check
     - pytest -v
-  
+
 
 about:
   home: https://github.com/alexdaniel654/Segmentation_Metrics
