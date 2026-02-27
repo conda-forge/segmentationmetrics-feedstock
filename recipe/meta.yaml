@@ -1,5 +1,5 @@
 {% set name = "segmentationmetrics" %}
-{% set version = "1.1.2" %}
+{% set version = "1.2.0" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/alexdaniel654/Segmentation_Metrics/archive/v{{ version }}.tar.gz
-  sha256: ec50d971340d3ce98bbd6b01d989f6ef6628a18e58f5f24fa2e96f180cf39ae6
+  sha256: 22becdc0c7080f902b5bc8b2e9d314b620a9e857cdfbc3491d714f770580e7d7
 
 build:
   noarch: python
